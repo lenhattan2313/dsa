@@ -1,3 +1,4 @@
+from DSA.perfectSquare import Solution
 from utils import maximum, fibonacci, climbStairs
 from utils.excel import process_sheet
 from utils.maxSubArray import max_sub_arr
@@ -45,3 +46,6 @@ tan = Person(name="tan")
 #     foods.append(food)
 #
 # print(foods)
+
+solution = Solution()
+print(solution.is_perfect_square(17))
