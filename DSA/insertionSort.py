@@ -3,16 +3,17 @@ class Solution:
         n = len(arr)
         if n < 2:
             return arr
-
-        for i in range(1, n):
-            cur = arr[i]
+        i = 1
+        while i < n:
+            curr = arr[i]
             j = i - 1
-            if arr[j] < cur:
+            if arr[j] < curr:
                 continue
-            while j >= 0 and arr[j] >= cur:
+            while j >= 0 and arr[j] > curr:
                 arr[j + 1] = arr[j]
-                j -= 1
-            arr[j + 1] = cur
+                j-= 1
+            arr[j + 1] = curr
+            i += 1
         return arr
 
 solution = Solution()
