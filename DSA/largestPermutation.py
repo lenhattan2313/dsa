@@ -15,6 +15,22 @@ class Solution:
             i+=1
             _max -= 1
         return arr
+
+#1053. Previous Permutation With One Swap
+    def prevPermOpt1(self, arr):
+        n = len(arr)
+        i = n - 2
+        while i >= 0 and arr[i] <= arr[i + 1]:
+            i-= 1
+        if i < 0:
+            return arr
+
+        j = n - 1
+        while j > i and (arr[j] >= arr[i] or arr[j] == arr[j - 1]):
+            j-= 1
+        arr[j], arr[i] = arr[i], arr[j]
+        return arr
+
 #Time complexity: O(n)
 #Space complexity: O(1)
 solution = Solution()
