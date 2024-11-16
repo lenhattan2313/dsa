@@ -10,7 +10,7 @@ class Solution:
             next_max = -heapq.heappop(arr)
 
             if max_num != next_max:
-                heapq.heappush(arr, max_num - next_max)
+                heapq.heappush(arr, - max_num + next_max)
 
         return -arr[0] if arr else 0
 #Time complexity: O(n)

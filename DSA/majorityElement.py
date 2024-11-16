@@ -15,6 +15,32 @@ class Solution:
         else:
             return None  # No majority element found
 
+# counter = Counter(nums)
+        # for key, value in counter.items():
+        #     if value > len(nums) / 2:
+        #         return key
+        # return 0
+        # hash = {}
+        # ans = majority = 0
+        # for i in nums:
+        #     hash[i] = hash.get(i, 0) + 1
+        #     if hash[i] > majority:
+        #         ans = i
+        #         majority = hash[i]
+        # hash = defaultdict(int)
+        # for n in nums:
+        #     hash[n] += 1
+        #     if(hash[n] > len(nums) // 2):
+        #         return n
+        # return None
+        #
+        # candidate = 0
+        # count = 0
+        # for n in nums:
+        #     if count == 0:
+        #         candidate = n
+        #     count += 1 if n == candidate else -1
+        # return candidate
 # Example usage
 solution = Solution()
 print(solution.majorityElement([3, 2, 3]))  # Output: 3
