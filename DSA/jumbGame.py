@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def jumb(self, nums: List[int]) -> bool:
         n = len(nums)
@@ -18,6 +20,7 @@ class Solution:
 
         #     gas-= 1
         # return True
+
     def jumpII(self, nums: List[int]) -> int:
         n = len(nums)
         near = far = jumb = 0
@@ -30,3 +33,19 @@ class Solution:
             jumb += 1
 
         return jumb
+
+    def jumpGame2(self, nums):
+        jump = 0
+        far = near = 0
+        n = len(nums)
+        while far < n - 1:
+            farthest = 0
+            for i in range(near, far + 1):
+                farthest = max(farthest, nums[i] + near)
+            jump += 1
+            near = far + 1
+            far = farthest
+        return jump
+
+solution = Solution()
+print(solution.jumpGame2([2,3,1,1,4]))

@@ -23,5 +23,19 @@ class Solution:
                 start = i + 1
 
         return start
+
+    def canCompleteCircuit2(self, gas, cost) -> int:
+        start = 0
+        n = len(gas)
+        curr = 0
+        for i, (g, c) in enumerate(zip(gas * 2, cost * 2)):
+            curr += g - c
+            if i - start == n:
+                return start
+
+            if curr < 0:
+                curr = 0
+                start += 1
+        return -1
 solution = Solution()
-print(solution.canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2]))
+print(solution.canCompleteCircuit2([1,2,3,4,5], [3,4,5,1,2]))

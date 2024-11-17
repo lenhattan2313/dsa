@@ -12,13 +12,6 @@ class Solution:
         print(nums)
         return k
 
-    def majorityElement(self, nums: List[int]) -> int:
-        counter = Counter(nums)
-        for key, value in counter.items():
-            if value > len(nums) / 2:
-                return key
-        return 0
-
     def rotate(self, nums: List[int], k: int) -> None:
         """
         Do not return anything, modify nums in-place instead.
