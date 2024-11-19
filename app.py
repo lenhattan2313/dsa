@@ -1,4 +1,4 @@
-from DSA.zigzag import Solution
+from DSA.lengthOfLongestSubstring import Solution
 from utils import maximum, fibonacci, climbStairs
 from utils.excel import process_sheet
 from utils.maxSubArray import max_sub_arr
@@ -48,4 +48,7 @@ tan = Person(name="tan")
 # print(foods)
 
 solution = Solution()
-print(solution.zigzag("PAYPALISHIRING", 3))
+print(solution.isIsomorphic("badc"
+, "baba"
+
+))
