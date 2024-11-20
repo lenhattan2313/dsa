@@ -1,4 +1,4 @@
-from DSA.anargam import Solution
+from DSA.longestSubStringAtMostFreq import Solution
 from utils import maximum, fibonacci, climbStairs
 from utils.excel import process_sheet
 from utils.maxSubArray import max_sub_arr
@@ -46,6 +46,5 @@ tan = Person(name="tan")
 #     foods.append(food)
 #
 # print(foods)
-
 solution = Solution()
-print(solution.anagram("anagram", "nagaram"))
+print(solution.longestSubStringAtMostFreq("babcaag", 1))
