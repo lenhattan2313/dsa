@@ -1,4 +1,4 @@
-from collections import Counter
+from collections import Counter, defaultdict
 
 
 class Solution:
@@ -28,9 +28,18 @@ class Solution:
                 hash.pop(char)
         return not hash
 
+    def anagram(self, s, t):
+        hash = defaultdict(int)
+        for i in s:
+            hash[i] += 1
 
-
+        for j in t:
+            if j in hash and hash[j] > 0:
+                hash[j] -= 1
+            else:
+                return False
+        return all(value == 0 for value in hash.values())
 
 
 solution = Solution()
-print(solution.is_anagram("dear", "raad"))
+print(solution.anagram("anagram", "nagaram"))

@@ -1,4 +1,4 @@
-from DSA.lengthOfLongestSubstring import Solution
+from DSA.anargam import Solution
 from utils import maximum, fibonacci, climbStairs
 from utils.excel import process_sheet
 from utils.maxSubArray import max_sub_arr
@@ -48,7 +48,4 @@ tan = Person(name="tan")
 # print(foods)
 
 solution = Solution()
-print(solution.isIsomorphic("badc"
-, "baba"
-
-))
+print(solution.anagram("anagram", "nagaram"))

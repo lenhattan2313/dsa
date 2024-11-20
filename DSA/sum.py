@@ -28,10 +28,18 @@ class Solution:
                 return [left + 1, right + 1]
         return []
 
+    def twoSum(self, nums, target):
+        hash = {}
+        for i in range(len(nums)):
+                if nums[i] in hash:
+                    return [hash[nums[i]], i]
+                hash[target - nums[i]] = i
+
+        return None
 
 
 
 solution  = Solution()
-print(solution.threeSum([0, 0, 0]))
+print(solution.twoSum([2, 3, 4], 6))
 
 # -4 -1 -1 0 1 2
